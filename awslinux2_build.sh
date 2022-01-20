@@ -38,6 +38,7 @@ sudo chmod +x /etc/profile.d/maven.sh
 source /etc/profile.d/maven.sh
 
 # Create a Maven quickstart project:
+cd ~
 mvn -B archetype:generate  -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeVersion=1.4  -DgroupId=com.cfwebtools.awssdk2  -DartifactId=aws_sdk-2
 
 # Add the Maven Project Object Model (POM)
@@ -111,4 +112,5 @@ EOF
 
 # Create the .jar file with all dependencies
 # If you change the artifact ID, run mvn clean install
+cd ~/awssdk2
 mvn package
